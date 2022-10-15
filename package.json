@@ -1,0 +1,39 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "env-cmd -f ./.env node app.js",
+    "dev": "env-cmd -f ./.env nodemon app.js",
+    "migrate_by_models": "env-cmd -f ./.env node ./configurations/migrate",
+    "migrate": "npx sequelize db:migrate",
+    "migratedown": "npx sequelize db:migrate:undo:all",
+    "migratedown_last": "npx sequelize db:migrate:undo"
+  },
+  "dependencies": {
+    "assert": "^2.0.0",
+    "axios": "^0.27.2",
+    "bcrypt-nodejs": "^0.0.3",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "env-cmd": "^10.1.0",
+    "express": "~4.16.1",
+    "html-pdf-node": "^1.0.8",
+    "html-to-docx": "^1.4.0",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.3.3",
+    "node-input-validator": "^4.5.0",
+    "rimraf": "^3.0.2",
+    "sequelize": "^6.17.0",
+    "sequelize-auto": "^0.8.8",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
